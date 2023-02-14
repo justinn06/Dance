@@ -13,17 +13,13 @@ public class Dance {
         this.ticketSales = 0;
     }
 
-    public void buyTicket(int a) {
-        if (a == 1)
-            ticketSales = ticketSales + 1;
-        else if (a == 2)
+    public void ticket(int a) {
+        if (a == 2)
             ticketSales = ticketSales + 2;
         else if (a == 3)
-            ticketSales = ticketSales + 3;
-        else if (a == 4)
             ticketSales = ticketSales + 4;
-        else
-            System.out.println("Not an option");
+        else if (a == 0)
+            ticketSales = ticketSales + 6;
 
         attendance = attendance + 1;
     }

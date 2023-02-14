@@ -1,5 +1,5 @@
 import java.util.*;
-public class StudentCouncil {
+public class StudentCouncil extends Dance{
 
     private Dance dance;
     private Scanner scan;
@@ -11,16 +11,15 @@ public class StudentCouncil {
 
     public void mainMenu() {
         int ans;
-
         do {
 
-            System.out.println("====================");
+            System.out.println("\n====================");
             System.out.println("     Main Menu");
             System.out.println("====================");
             System.out.println("1. Buy a ticket");
             System.out.println("2. Print Summary Report");
             System.out.println("3. Exit");
-            System.out.println("\nSelect: ");
+            System.out.print("\nSelect: ");
 
             ans = scan.nextInt();
 
@@ -34,9 +33,27 @@ public class StudentCouncil {
         while (ans != 3);
     }
 
-    public void buyTicket() {}
+    public void buyTicket() {
+        System.out.println("\n====================");
+        System.out.println("      Tickets");
+        System.out.println("====================");
+        System.out.println("1. With Gold Pass - 0€");
+        System.out.println("2. With Silver Pass - 2€");
+        System.out.println("3. With Bronze Pass - 4€");
+        System.out.println("4. With no pass - 6€");
+        System.out.print("\nSelect: ");
 
-    public void printSummary() {}
+        Scanner key = new Scanner(System.in);
+        ticket(key.nextInt());
+    }
+
+    public void printSummary() {
+        System.out.println("\n====================");
+        System.out.println("   Summary Report");
+        System.out.println("====================");
+        System.out.println("Number of students attending: " + getAttendance());
+        System.out.println("Ticket sales: " + getTicketSales() + "€");
+    }
 
 
 
