@@ -24,10 +24,9 @@ public class StudentCouncil extends Dance{
             ans = scan.nextInt();
 
             if (ans == 1)
-                buyTicket();
+                this.buyTicket();
             else if (ans == 2)
-                printSummary();
-
+                this.printSummary();
 
         }
         while (ans != 3);
@@ -44,15 +43,15 @@ public class StudentCouncil extends Dance{
         System.out.print("\nSelect: ");
 
         Scanner key = new Scanner(System.in);
-        ticket(key.nextInt());
+        dance.ticket(key.nextInt());
     }
 
     public void printSummary() {
         System.out.println("\n====================");
         System.out.println("   Summary Report");
         System.out.println("====================");
-        System.out.println("Number of students attending: " + getAttendance());
-        System.out.println("Ticket sales: " + getTicketSales() + "€");
+        System.out.println("Number of students attending: " + dance.getAttendance());
+        System.out.println("Ticket sales: " + dance.getTicketSales() + "€");
     }
 
 

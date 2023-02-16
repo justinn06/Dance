@@ -10,7 +10,7 @@ public class Dance {
 
     public Dance() {
         this.attendance = 0;
-        this.ticketSales = 0;
+        this.ticketSales = 0.0;
     }
 
     public void ticket(int a) {
@@ -18,8 +18,10 @@ public class Dance {
             ticketSales = ticketSales + 2;
         else if (a == 3)
             ticketSales = ticketSales + 4;
-        else if (a == 0)
+        else if (a == 4)
             ticketSales = ticketSales + 6;
+        else
+            ticketSales = ticketSales + 0;
 
         attendance = attendance + 1;
     }
